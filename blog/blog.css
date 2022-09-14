@@ -1,0 +1,321 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    font-family: 'Arial',serif;
+    /* 设置背景颜色 */
+    background-color: #FAFAF2;
+}
+#container{
+    /* 将整个页面设置成固定宽度居中 */
+    width: 1026px;
+    margin: 0 auto;
+    /* 设置左右内边距 */
+
+    /* 使边框能包住所有浮动元素 */
+    overflow: hidden;
+    /* border: 1px solid #111; */
+}
+
+#wrapper{
+    width: 1024px;
+    overflow: hidden;
+    border: 1px solid #E0E0DE;
+    border-top: none;
+    background-color: white;
+    padding-bottom: 60px;
+}
+header.topheader{
+    background: url(images/header.jpg) center 0 no-repeat;
+    position: relative;
+    height: 105px;
+}
+header.topheader nav ul{
+    
+    /* 清楚浮动？？ */
+    overflow: hidden;
+}
+header.topheader nav li{
+    /* 删除列表图标 */
+    list-style: none;
+    float: left;
+}
+header.topheader nav li+li{
+    
+    border-left: 1px solid #111 ;
+
+}
+/* 第一个首页链接的格式 */
+header.topheader nav li:nth-child(1) a{
+    color: #857E64;
+}
+/* 设置导航链接格式 */
+header.topheader nav ul a{
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    display: block;
+    padding: 0 10px;
+}
+
+/* 专注用户体验 EVERY INCH OF USER EXPERIENCE */
+header.topheader h3{
+    color: #fff;
+    font-weight: normal;
+    font-size: 8px;
+    letter-spacing: 3px;
+    position: absolute;
+    left: 175px;
+    top: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* 陈童的博客 */
+header.topheader h1{
+    color: rgb(127,110,48);
+    position: absolute;
+    left: 175px;
+    top: 30px;
+    letter-spacing: 5px;
+    font-size: 40px;
+}
+/* 主导航 */
+header.topheader hgroup+h1{
+    color: #939178;
+    position: absolute;
+    left: 635px;
+    top: 50px;
+    letter-spacing: 6px;
+    font-size: 16px;
+}
+/* 独立博客作者 */
+header.topheader h2{
+    color: #7F7F77;
+    position: absolute;
+    left: 170px;
+    letter-spacing: 20px;
+    top: 85px;
+    font-size: 16px;
+}
+/* 导航栏定位 */
+header.topheader nav{
+    position: absolute;
+    left: 640px;
+    top: 85px;
+}
+/* 箭头定位 */
+header.topheader .arrow{
+    position: absolute;
+    left: 655px;
+    bottom: -10px;
+}
+
+/* main */
+section#main{
+    margin: 20px;
+    /* border: 1px solid #111; */
+    width: 730px;
+    float: left;
+}
+/* 定义时间区域 */
+section#time span{
+    color: #71888E;
+    
+}
+section#time{
+    padding: 5px 0;
+    /* 蠢不蠢 */
+    width: 984px;
+    border-bottom: 1px solid #E0E0DE;
+    margin-bottom: 10px;
+    /* float: left; */
+}
+/* 定义banner区域 */
+section#banner{
+    width: 710px;
+    border: 1px solid #E0E3DC;
+    padding: 10px;
+    /* 这个overflow加在这里的意义到底如何解释 */
+    overflow: hidden;
+    background-color: #FAFAF0;
+}
+
+section#banner img{
+    float: left;
+}
+section#banner .description figcaption{
+    font-style: italic;
+}
+section#banner .description{
+    padding: 20px 0 0 360px;
+    font-size: 12px;
+}
+/* 为什么选不中  因为p不是description的第一个元素*/
+/* section#banner .description p:first-child{
+    line-height: 18px;
+} */
+section#banner .description figcaption+p{
+    line-height: 18px;
+    padding-top: 14px;
+}
+section#banner .description p:last-child{
+    padding-top: 20px;
+    padding-left: 170px;
+    font-size: 13px;
+}
+article a{
+    color: #111;
+}
+/* 定义文章样式 */
+article section#text h1{
+    padding-top: 15px;
+    font-size: 30px;
+}
+
+/* by Philip Walton */
+article section#text p:nth-child(2){
+    padding: 10px 0 0 40px;
+}
+article section#text p:nth-child(n+3):nth-child(-n+6){
+    padding: 10px 0 0 40px;
+    font-size: 14px;
+}
+
+article section#text p:nth-child(5) abbr{
+
+    text-decoration: none;
+}
+/* 代码 */
+article section#text p:nth-child(5) code{
+
+    font-family: consola;
+    font-style: italic;
+}
+
+/*陈童是一位*/
+article footer.articleinfo p:first-child{
+
+    padding: 10px 0 0 0;
+    font-style: italic;
+}
+
+/* 侧边栏天气情况 */
+aside{
+    float: left;
+    width: 252px;
+    color: #71888E;
+    margin-top: 60px;
+}
+/* 天气预报 */
+aside h2:first-child{
+    padding-top: 20px;
+    padding-right: 35px;
+    text-align: right;
+    font-size: 30px;
+}
+aside figure{
+    padding-top: 40px;
+    padding-left: 160px;
+}
+aside figure figcaption{
+    float: left;
+}
+aside figure img{
+    float: left;
+    margin-top: -12px;
+    margin-left: 10px;
+    display: block;
+}
+aside ul{
+    clear: left;
+    padding-top: 40px;
+    list-style-type: none;
+}
+aside li p{
+    font-size: 20px;
+    padding-right: 30px;
+    text-align: right;
+}
+
+aside li p span:first-child{
+    text-decoration: line-through;
+}
+aside li p span:last-child{
+    font-weight: bold;
+}
+/* 名人观点 */
+aside h2:nth-child(4){
+    padding-top: 40px;
+    padding-right: 35px;
+    text-align: right;
+    font-size: 30px;
+    
+}
+
+aside blockquote:nth-child(5){
+    width: 128px;
+    font-size: 20px;
+    padding-top: 50px;
+    text-align: right;
+    margin-left: 55px;
+    position: relative;
+}
+/* 左引号 */
+aside blockquote:nth-child(5) p:first-child{
+    font-size: 120px;
+    position: absolute;
+    left: -30px;
+    top: 10px;
+    font-family: 'Times New Roman';
+}
+/* 右引号 */
+aside blockquote:nth-child(5) p:last-child{
+    font-size: 120px;
+    position: absolute;
+    right: -50px;
+    bottom: -100px;
+    font-family: 'Times New Roman';
+}
+/* Tim Berners Lee */
+aside p:nth-child(6){
+    padding-top: 40px;
+    padding-left: 50px;
+}
+aside p:nth-child(6) abbr{
+    text-decoration: none;
+}
+aside p:nth-child(6) a{
+    color: #111;
+    font-weight: bold;
+}
+footer.contentinfo{
+    margin-top: 10px;
+}
+footer.contentinfo p{
+    clear: both;
+    font-size: small;
+    padding-left: 100px;
+}
+footer.contentinfo p:first-child{
+    font-weight: bold;
+}
+footer.contentinfo p:last-child{
+    font-family: 'Times New Roman';
+}
+/* 联系我的定位 */
+footer.contentinfo address{
+    float: right;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+    padding-right: 100px;
+    margin-top: -20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+footer.contentinfo address a{
+	text-decoration: none;
+	color: #000;
+}
+/* 这里还有疑问 */
