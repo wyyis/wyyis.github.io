@@ -746,7 +746,7 @@ body{
     height: 9.66rem;
     margin: 0 auto;
     text-align: center;
-    background: url(https://news.cri.cn/wximg/f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.haibao-bg2.jpg) no-repeat;
+    background: url(res/haibao-bg2.jpg) no-repeat;
     background-size: cover;
     font-weight: bold;
     margin-top: 6.95rem;

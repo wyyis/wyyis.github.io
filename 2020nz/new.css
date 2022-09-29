@@ -104,7 +104,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    visibility: hidden; 
+    /* visibility: hidden;  */
 }
 .loading-img{
     width: 2rem;
@@ -326,6 +326,10 @@ body{
 }
 
 
+.year-end-scene li.scene-box-index{
+    left: -16rem;
+}
+
 /* 场景一 */
 .scene-box-1{
     height: 27.05rem;
@@ -370,4 +374,36 @@ body{
     background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene6-bg.png) no-repeat;
     background-size: cover;
     overflow: hidden;
+}
+
+
+.fanhui{
+    width: 1.36rem;
+    height: 1.52rem;
+    background: url(res/fanhui.png) no-repeat;
+    background-size: cover;
+    display: none;
+    position: absolute;
+    top: 0.29rem;
+    left: 0.59rem;
+    z-index: 100;
+}
+
+
+
+
+
+/* 最后的海报 */
+/* 海报 */
+.haibao{
+    width: 16rem;
+    height: 27.05rem;
+    background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.haibao-bg1.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -16rem;
+    z-index: 95;
+    /* transition: all 1s; */
 }

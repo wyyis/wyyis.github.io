@@ -4,19 +4,24 @@ function loadimg() {
     var img = [],
         flag = 0,
         mulitImg = [];
+        console.log($(".loading").length)
+        
     if ($(".loading").length >= 1) {
         // $(".fxb_img").each(function (i, elem) {
         //     var imgSrc = $(this).attr("src")
         //     mulitImg.push(imgSrc)
         // })
+        
         $(".nz_bg").each(function (i, elem) {
             var imgSrc = $(this).css("background-image")
             if (imgSrc == "none") {
+                console.log("没有图片")
 
             } else {
                 imgSrc = imgSrc.replace('url("', '')
                 imgSrc = imgSrc.replace('")', '')
                 mulitImg.push(imgSrc)
+                console.log("已找到一张图片")
             }
         })
         var imgTotal = mulitImg.length;
@@ -28,6 +33,7 @@ function loadimg() {
                 if (flag == imgTotal) {
                    $('.loading-zi').remove();
                    $('.loading-img').addClass('loadactive');
+                   console.log("已加载完毕")
                 }
             }
         }
@@ -99,3 +105,169 @@ function autoDiv() {
         }
     }, 300)
 }
+
+
+
+// 进入每个页面后
+
+
+
+var e;
+var numIndex;
+var moveX;
+var moveY;
+var startX;
+var startY
+var numBox;
+var timer = null;
+var Twotimer = null;
+var imgNum = 1;
+var imgnumT = 1;
+var haibao = 1;
+var ZuiMaxWidth = (parseInt($('.wrap').width()) - parseInt($('.year-end-box').width() * (wrapH / objH))) / 2;
+
+$('.year-end-fragment li').on({
+    touchstart: function (e) {
+        e.preventDefault();
+        numIndex = $(this).index();
+        e = e || window.event;
+        /* 获取元素可移动的最大宽高值 */
+        maxWidth = $('.year-end').width() - $(this).width();
+        maxHeight = $('.year-end').height() - $(this).height();
+        /* 获取鼠标点击的位置距元素左边的值 正常 */
+        // startX = e.originalEvent.targetTouches[0].pageX - $(this).offset().left;
+        // startY = e.originalEvent.targetTouches[0].pageY - $(this).offset().top;
+        /* 获取鼠标点击的位置距元素左边的值 缩放 */
+        startX = ((e.originalEvent.targetTouches[0].pageX - ZuiMaxWidth) / (wrapH / objH)) - (($(this).offset().left - ZuiMaxWidth) / (wrapH / objH));
+        startY = (e.originalEvent.targetTouches[0].pageY / (wrapH / objH)) - ($(this).offset().top / (wrapH / objH));
+    },
+    touchmove: function (e) {
+        if ($(this).attr("changjing") == "off") {
+            numBox = $('.year-end-fragment-indexBox li').eq(numIndex);
+            e = e || window.event;
+            e.preventDefault();
+            // /* 新的位置 减去 最开始的位置 等于 要移动的值 */
+            moveX = ((e.originalEvent.targetTouches[0].pageX - ZuiMaxWidth) / (wrapH / objH)) - startX;
+            moveY = (e.originalEvent.targetTouches[0].pageY / (wrapH / objH)) - startY;
+
+            // 超出范围限制
+            if (moveX >= maxWidth) {
+                moveX = maxWidth
+            }
+            if (moveY >= maxHeight) {
+                moveY = maxHeight
+            }
+            if (moveX <= 0) {
+                moveX = 0
+            }
+            if (moveY <= 0) {
+                moveY = 0
+            }
+            // 给元素赋值
+            $(this).css({ left: moveX, top: moveY });
+        }
+    },
+    touchend: function (e) {
+        e.preventDefault();
+        e = e || window.event;
+        var endWidth = ($('.year-end-fragment-indexBox').offset().left - ZuiMaxWidth) / (wrapH / objH);
+        var endHeight = $('.year-end-fragment-indexBox').offset().top / (wrapH / objH)
+        var endWidthMax = endWidth + ($('.year-end-fragment-indexBox').width() * (wrapH / objH));
+        var endHeightMax = endHeight + ($('.year-end-fragment-indexBox').height() * (wrapH / objH));
+        var thisNumW = $(this).offset().left;
+        var thisNumH = $(this).offset().top;
+        var thisNumWMax = $(this).offset().left + $(this).width()
+        var thisNumHMax = $(this).offset().top + $(this).height()
+
+        //  当前left      坑left      当前left     坑的宽度        当前top     坑的top        当前top      坑的高度
+        if (thisNumW >= endWidth && thisNumW <= endWidthMax && thisNumH >= endHeight && thisNumH <= endHeightMax) {
+            var endBoxW = numBox.css('left');
+            var endBoxH = numBox.css('top');
+            $(this).css({
+                left: endBoxW,
+                top: endBoxH
+            });
+            $(this).addClass('fragment-index-ac');
+            var _this = $(this)
+
+            // 加载动画场景
+            setTimeout(function () {
+                if (_this.attr("changjing") == 'off') {
+
+                    $('.year-end-fragment').hide();
+                    $('.year-end-fragment-indexBox').hide();
+                    $('.year-end-fragment-indexBox-gai').hide();
+                    $('.year-end-scene .scene-box').eq(numIndex).addClass('scene-box-index');
+
+                    // 火星场景js
+                    if ($('.scene-box').eq(numIndex).index() == 3) {
+                        
+                        $('.scene-box').eq(numIndex).find('.fanhui').show();
+
+
+                    } else {
+                        setTimeout(function () {
+                            imgShow();
+                        }, 500);
+                    }
+
+                    function imgShow() {
+                        timer = setInterval(function () {
+
+                            // 拜登场景js
+                            if ($('.scene-box').eq(numIndex).index() == 2) {
+                                $('.scene-box').eq(numIndex).find('.fanhui').show();
+                                
+
+                                // 世界经济论坛
+                            } else if ($('.scene-box').eq(numIndex).index() == 5) {
+                                $('.scene-box').eq(numIndex).find('.fanhui').show();
+
+                                // 扩大开放场景js
+                            } else if ($('.scene-box').eq(numIndex).index() == 1) {
+                                $('.scene-box').eq(numIndex).find('.fanhui').show();
+
+                                // 东京奥运会场景
+                            } else if ($('.scene-box').eq(numIndex).index() == 4) {
+                                $('.scene-box').eq(numIndex).find('.fanhui').show();
+                               
+                            } 
+                            // 最后一个场景
+                            else if ($('.scene-box').eq(numIndex).index() == 0) {
+                                $('.scene-box').eq(numIndex).find('.fanhui').show();
+                                
+
+                            }else{
+
+                            }
+                        }, 1500);
+                    }
+                    $('.scene-box').eq(numIndex).find('.fanhui').click(function () {
+                        console.log("dsd")
+                        imgNum = 1;
+                        clearInterval(timer);
+                        clearInterval(Twotimer);
+                        $('.scene-box').eq(numIndex).removeClass('scene-box-index');
+                        _this.removeClass('fragment-btn');
+                        setTimeout(function () {
+                            $('.year-end-fragment').show();
+                            $('.year-end-fragment-indexBox').show();
+                            $('.year-end-fragment-indexBox-gai').show();
+                        }, 500);
+                        _this.attr("changjing", "on");
+                        haibao ++
+                        if (haibao - 1 == $('.year-end-fragment li').length) {
+                            setTimeout(function () {
+                                $('.haibao').css('left','0');
+                            }, 1000);
+                        }
+                    })
+                } else {
+                    
+                }
+            }, 1000)
+        } else {
+            // console.log(222)
+        }
+    }
+})
