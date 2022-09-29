@@ -17,10 +17,10 @@
 	position: relative;
 	background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.box-bg.jpg);
     background-size: 100% 100%;
-    font-family: "å¾®è½¯é›…é»‘","Microsoft YaHei","Microsoft YaHei UI",Arial,SimSun,sans-serif !important;
+    font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI",Arial,SimSun,sans-serif !important;
 }
 body{
-    font-family: "å¾®è½¯é›…é»‘","Microsoft YaHei","Microsoft YaHei UI",Arial,SimSun,sans-serif !important;
+    font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI",Arial,SimSun,sans-serif !important;
 }
 .wrap-auto {
 	width: 16rem;
@@ -83,7 +83,7 @@ body{
     }
 } */
 
-/* æ ·å¼ */
+/* 样式 */
 .aImg,.aImg img{
     display: block;
     width: 100%;
@@ -99,13 +99,13 @@ body{
 .w16{
     width: 16rem;
 }
-/* å¤§èƒŒæ™¯ */
+/* 大背景 */
 .year-end{
     height: 100%;
 	overflow-x: hidden;
 	background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.year-end-bg.png) no-repeat;
     background-size: cover;
-    font-family: arial,"Hiragino Sans GB","Microsoft Yahei","å¾®è½¯é›…é»‘",Tahoma,Helvetica,STHeiti;
+    font-family: arial,"Hiragino Sans GB","Microsoft Yahei","微软雅黑",Tahoma,Helvetica,STHeiti;
 }
 .year-end-box{ 
     width: 16rem;
@@ -113,7 +113,7 @@ body{
     overflow: hidden;
     position: relative;
 }
-/* éŸ³é¢‘ */
+/* 音频 */
 .audio-box{
     width: 1rem;
     height: 1rem;
@@ -135,7 +135,7 @@ body{
 .audio-box audio{
     display: none;
 }
-/* æŒ‰é’®å›žåˆ°å‘çš„ä½ç½®å›¾ */
+/* 按钮回到坑的位置图 */
 .year-end-fragment-indexBox-gai{
     width: 16rem;
     height: 12.23rem;
@@ -158,7 +158,7 @@ body{
     position: absolute;
     z-index: 0;
 }
-/* æŒ‰é’®å›žåˆ°å‘çš„ä½ç½® */
+/* 按钮回到坑的位置 */
 .fragment-index-1{
     width: 5.82rem;
     height: 5.82rem;
@@ -195,7 +195,7 @@ body{
     left: 10.35rem;
     top: 5.9rem;
 }
-/* æŒ‰é’®å›¾ç‰‡ */
+/* 按钮图片 */
 .fragment-btn1{
     width: 5.82rem;
     height: 5.82rem;
@@ -252,7 +252,7 @@ body{
 .year-end-fragment li.fragment-index-ac{
     transition: all .8s;
 }
-/* åœºæ™¯æ ·å¼ */
+/* 场景样式 */
 .year-end-scene{
     width: 16rem;
     position: absolute;
@@ -267,7 +267,7 @@ body{
     left: 0;
     top: 0;
 }
-/* åœºæ™¯ä¸€ */
+/* 场景一 */
 .scene-box-1{
     height: 27.05rem;
     background-size: cover;
@@ -294,7 +294,7 @@ body{
     left: 0.77rem;
     background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene1-btn-3.png) no-repeat;
 }
-/* åœºæ™¯äºŒ */
+/* 场景二 */
 .scene-box-2{
     height: 27.05rem;
     background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene2-bg.jpg) no-repeat;
@@ -354,7 +354,7 @@ body{
     z-index: 5;
     background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene2-btn-6.png) no-repeat;
 }
-/* åœºæ™¯ä¸‰ */
+/* 场景三 */
 .scene-box-3{
     width: 16rem;
     height: 27.05rem;
@@ -408,7 +408,7 @@ body{
     z-index: 7;
     background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene3-btn-6.png) no-repeat;
 }
-/* åœºæ™¯å›› */
+/* 场景四 */
 .scene-box-4{
     width: 16rem;
     height: 27.05rem;
@@ -530,7 +530,7 @@ body{
     z-index: 12;
     background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene4-btn-9.png);
 }
-/* åœºæ™¯äº” */
+/* 场景五 */
 .scene-box-5{
     width: 16rem;
     height: 27.05rem;
@@ -643,9 +643,9 @@ body{
     font-size: .7rem;
     text-align: justify;
     color: #613d2d;
-    font-family: "å¾®è½¯é›…é»‘","Microsoft YaHei","Microsoft YaHei UI",Arial,SimSun,sans-serif !important;
+    font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI",Arial,SimSun,sans-serif !important;
 }
-/* åœºæ™¯å…­ */
+/* 场景六 */
 .scene-box-6{
     width: 16rem;
     height: 27.05rem;
@@ -715,7 +715,7 @@ body{
     left: 0.59rem;
     z-index: 100;
 }
-/* æµ·æŠ¥ */
+/* 海报 */
 .haibao{
     width: 16rem;
     height: 27.05rem;

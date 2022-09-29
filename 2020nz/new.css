@@ -1,0 +1,373 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+font-family: arial,"Hiragino Sans GB","Microsoft Yahei","微软雅黑",Tahoma,Helvetica,STHeiti;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+} 
+input, textarea, select,button {font-size: 100%;font-family: inherit;vertical-align:middle;}
+textarea {resize:none;overflow:auto; }
+a,a:link,a:visited,a:hover,a:active{text-decoration:none;}
+
+
+
+
+
+
+
+
+
+
+
+body{
+    font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI",Arial,SimSun,sans-serif !important;
+}
+.zuiwai{
+    /* 禁止滑动栏滚动 */
+    position: fixed;
+    top:0;
+	left:0;
+    width: 100%;
+    /* !important 优先级满级 */
+	height: 100% !important;
+}
+.wrap{
+    width: 100%;
+	height: 100%;
+    position: relative;
+    /* 设置大黄色背景，布满整个页面 */
+    background: url(res/box-bg.jpg);
+    background-size: 100% 100%;
+    font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI",Arial,SimSun,sans-serif !important;
+}
+
+.wrap-auto {
+	width: 16rem;
+    height: 30rem;
+    margin: 0 auto;
+	position: absolute;
+    /* 居中处理 */
+    top:50%;
+	left:50%;
+    transform-origin:50% 0%;
+    -ms-transform-origin:50% 0%;
+	-webkit-transform-origin:50% 0%;
+	-moz-transform-origin:50% 0%;
+	-o-transform-origin:50% 0%;
+    /* visibility: hidden; */
+}
+.loading{
+    width: 16rem;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; 
+}
+.loading-img{
+    width: 2rem;
+    height: 2rem;
+    background: url(res/loading.gif) center center no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 10;
+}
+.loading-zi{
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    margin-top: 1rem;
+}
+.loading-bg{
+    width: 100%;
+	height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* 拖拽提示图片格式
+将转圈图换成拖拽图 */
+.loading-img.loadactive{
+    width: 6.37rem;
+    height: 7.25rem;
+    background: url(res/tuozhuai.png) center center no-repeat;
+    background-size: contain;
+}
+
+.w16{
+    width: 16rem;
+}
+
+/* 进入之后的大背景 */
+.year-end{
+    height: 100%;
+    /* 隐藏x轴的滚动条 */
+    overflow-x: hidden;
+    background: url(res/year-end-bg.png) no-repeat;
+    background-size: cover;
+    font-family: arial,"Hiragino Sans GB","Microsoft Yahei","微软雅黑",Tahoma,Helvetica,STHeiti;
+}
+.year-end-box{ 
+    width: 16rem;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/* 音频 */
+.audio-box{
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    background: url(res/play.png) no-repeat;
+    background-size: cover;
+    z-index: 101;
+}
+/* 音频动画 */
+.audio-box{
+    animation: round 5s linear infinite;
+} 
+@keyframes round {
+    100% {
+      transform: rotate(1turn);
+    }
+}
+
+.audio-box audio{
+    display: none;
+}
+
+/* 坑的整体属性 */
+.year-end-fragment-indexBox{
+    width: 16rem;
+    height: 12.23rem;
+    position: absolute;
+    top: 0;
+	left: 0;
+	background: url(res/indexBox-bg.png) no-repeat;
+    background-size: cover;
+    /* display: none; */
+}
+/* 坑的个体属性 */
+.year-end-fragment-indexBox li{
+    position: absolute;
+    z-index: 0;
+}
+
+
+.fragment-index-1{
+    width: 5.82rem;
+    height: 5.82rem;
+    left: 1.1rem;
+    top: 2.37rem;
+}
+.fragment-index-2{
+    width: 5.78rem;
+	height: 6.62rem;
+    left: 5.92rem;
+    top: 1.8rem;
+}
+.fragment-index-3{
+    width: 4.52rem;
+    height: 5.86rem;
+    left: 10.33rem;
+    top: 1.15rem;
+}
+.fragment-index-4{
+    width: 5.23rem;
+    height: 5.08rem;
+    left: 1.13rem;
+    top: 7.14rem;
+}
+.fragment-index-5{
+    width: 5.66rem;
+    height: 5.01rem;
+    left: 5.25rem;
+    top: 7.21rem;
+}
+.fragment-index-6{
+    width: 4.54rem;
+    height: 6.31rem;
+    left: 10.35rem;
+    top: 5.9rem;
+}
+
+/* 填充物属性 */
+.year-end-fragment li{
+    position: absolute;
+    background-size: cover;
+    /* display: none; */
+}
+
+/* 移动时的渐变效果 ？？ 暂未生效 */
+.year-end-fragment li.fragment-index-ac{
+    transition: all .8s;
+}
+
+.fragment-btn1{
+    width: 5.82rem;
+    height: 5.82rem;
+    left: 6.57rem;
+    top: 13.78rem;
+    z-index: 1;
+    background: url(res/Btn-1.png) no-repeat;
+}
+.fragment-btn2{
+    width: 5.78rem;
+	height: 6.62rem;
+	top: 14.55rem;
+    left: 1.41rem;
+    z-index: 5;
+    background: url(res/Btn-2.png) no-repeat;
+}
+.fragment-btn3{
+    width: 4.52rem;
+    height: 5.86rem;
+    left: 5.41rem;
+    top: 19.64rem;
+    z-index: 1;
+    background: url(res/Btn-3.png) no-repeat;
+}
+.fragment-btn4{
+    width: 5.23rem;
+    height: 5.08rem;
+    left: 1.21rem;
+    top: 21.16rem;
+    z-index: 5;
+    background: url(res/Btn-4.png) no-repeat;
+}
+.fragment-btn5{
+    width: 5.66rem;
+    height: 5.01rem;
+    left: 9.4rem;
+    top: 22.41rem;
+    z-index: 5;
+    background: url(res/Btn-5.png) no-repeat;
+}
+.fragment-btn6{
+    width: 4.54rem;
+    height: 6.31rem;
+    left: 10.79rem;
+    top: 15.49rem;
+    z-index: 5;
+    background: url(res/Btn-6.png) no-repeat;
+}
+
+/* 按钮回到坑的位置图 */
+.year-end-fragment-indexBox-gai{
+    width: 16rem;
+    height: 12.23rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+}
+
+/* 具体样式场景 */
+/* 场景样式 */
+.year-end-scene{
+    width: 16rem;
+    position: absolute;
+    right: -16rem;
+    top: 0;
+}
+.year-end-scene .scene-box{
+    width: 16rem;
+    position: absolute;
+    z-index: 1;
+    transition: all .5s;
+    left: 0;
+    top: 0;
+}
+
+
+/* 场景一 */
+.scene-box-1{
+    height: 27.05rem;
+    background-size: cover;
+}
+
+/* 场景二 */
+.scene-box-2{
+    height: 27.05rem;
+    background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene2-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* 场景三 */
+.scene-box-3{
+    width: 16rem;
+    height: 27.05rem;
+}
+
+/* 场景四 */
+.scene-box-4{
+    width: 16rem;
+    height: 27.05rem;
+    background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene4-bg.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* 场景五 */
+.scene-box-5{
+    width: 16rem;
+    height: 27.05rem;
+    background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene5-bg.png) left bottom no-repeat;
+    background-size: contain;
+    overflow: hidden;
+}
+
+/* 场景六 */
+.scene-box-6{
+    width: 16rem;
+    height: 27.05rem;
+    background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene6-bg.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
