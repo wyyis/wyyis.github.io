@@ -271,3 +271,22 @@ $('.year-end-fragment li').on({
         }
     }
 })
+
+// 换一个
+$('.haibao-flag').width($('.haibao-flag-list img').eq(0).attr('p-width'))
+$('.haibao-flag').height($('.haibao-flag-list img').eq(0).attr('p-height'))
+
+
+function haiBaoRandom() {
+    //x上限，y下限     
+    var haiBaoRandomX = $('.haibao-flag-list li').length;
+    var haiBaoRandomY = 1;
+    var rand = parseInt(Math.random() * (haiBaoRandomX - haiBaoRandomY + 1));
+    $(".haibao-flag").find('img').attr('src',$('.haibao-flag-list img').eq(rand).attr('src'));
+    $('.haibao-flag').width($('.haibao-flag-list img').eq(rand).attr('p-width'));
+    $('.haibao-flag').height($('.haibao-flag-list img').eq(rand).attr('p-height'));
+}
+
+$(".huan").click(function () {
+    haiBaoRandom();
+});
