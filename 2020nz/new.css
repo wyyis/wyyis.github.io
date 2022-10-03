@@ -76,14 +76,14 @@ body{
 	height: 100%;
     position: relative;
     /* 设置大黄色背景，布满整个页面 */
-    background: url(res/box-bg.jpg);
+    background: url(新图/bg.png);
     background-size: 100% 100%;
     font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI",Arial,SimSun,sans-serif !important;
 }
 
 .wrap-auto {
 	width: 16rem;
-    height: 30rem;
+    height: 34.6rem;
     margin: 0 auto;
 	position: absolute;
     /* 居中处理 */
@@ -147,7 +147,7 @@ body{
     height: 100%;
     /* 隐藏x轴的滚动条 */
     overflow-x: hidden;
-    background: url(res/year-end-bg.png) no-repeat;
+    background: url(新图/首页.png) no-repeat;
     background-size: cover;
     font-family: arial,"Hiragino Sans GB","Microsoft Yahei","微软雅黑",Tahoma,Helvetica,STHeiti;
 }
@@ -189,7 +189,7 @@ body{
     position: absolute;
     top: 0;
 	left: 0;
-	background: url(res/indexBox-bg.png) no-repeat;
+	/* background: url(res/indexBox-bg.png) no-repeat; */
     background-size: cover;
     /* display: none; */
 }
@@ -201,24 +201,24 @@ body{
 
 
 .fragment-index-1{
-    width: 5.82rem;
-    height: 5.82rem;
-    left: 1.1rem;
-    top: 2.37rem;
+    width: 6.01rem;
+    height: 5.08rem;
+    left: 0.2rem;
+    top: 7.4rem;
 }
 .fragment-index-2{
-    width: 5.78rem;
-	height: 6.62rem;
-    left: 5.92rem;
-    top: 1.8rem;
+    width: 6.90rem;
+	height: 5.99rem;
+    left: 6.0rem;
+    top: 6.4rem;
 }
 .fragment-index-3{
-    width: 4.52rem;
-    height: 5.86rem;
-    left: 10.33rem;
-    top: 1.15rem;
+    width: 8.73rem;
+    height: 9.45rem;
+    left: 8.0rem;
+    top: 0.15rem;
 }
-.fragment-index-4{
+/* .fragment-index-4{
     width: 5.23rem;
     height: 5.08rem;
     left: 1.13rem;
@@ -235,12 +235,12 @@ body{
     height: 6.31rem;
     left: 10.35rem;
     top: 5.9rem;
-}
+} */
 
 /* 填充物属性 */
 .year-end-fragment li{
     position: absolute;
-    background-size: cover;
+    background-size: contain;
     /* display: none; */
 }
 
@@ -250,30 +250,30 @@ body{
 }
 
 .fragment-btn1{
-    width: 5.82rem;
-    height: 5.82rem;
-    left: 6.57rem;
-    top: 13.78rem;
+    width: 6.01rem;
+    height: 5.08rem;
+    left: 9.5rem;
+    top: 12.78rem;
     z-index: 1;
-    background: url(res/Btn-1.png) no-repeat;
+    background: url(cbxres/总素材/第一层/辽宁.png) no-repeat;
 }
 .fragment-btn2{
-    width: 5.78rem;
-	height: 6.62rem;
-	top: 14.55rem;
-    left: 1.41rem;
+    width: 6.90rem;
+	height: 5.99rem;
+	top: 18.55rem;
+    left: 9.0rem;
     z-index: 5;
-    background: url(res/Btn-2.png) no-repeat;
+    background: url(cbxres/总素材/第一层/吉林地图.png) no-repeat;
 }
 .fragment-btn3{
-    width: 4.52rem;
-    height: 5.86rem;
-    left: 5.41rem;
-    top: 19.64rem;
+    width: 8.73rem;
+    height: 9.45rem;
+    left: 0.31rem;
+    top: 15.64rem;
     z-index: 1;
-    background: url(res/Btn-3.png) no-repeat;
+    background: url(cbxres/总素材/第一层/黑龙江.png) no-repeat;
 }
-.fragment-btn4{
+/* .fragment-btn4{
     width: 5.23rem;
     height: 5.08rem;
     left: 1.21rem;
@@ -296,7 +296,7 @@ body{
     top: 15.49rem;
     z-index: 5;
     background: url(res/Btn-6.png) no-repeat;
-}
+} */
 
 /* 按钮回到坑的位置图 */
 .year-end-fragment-indexBox-gai{
@@ -332,13 +332,13 @@ body{
 
 /* 场景一 */
 .scene-box-1{
-    height: 27.05rem;
-    background: url(cbxres/总素材/第三层/黑龙江内页.png) no-repeat;
+    height: 34.6rem;
+    background: url(新图/黑龙江.png) no-repeat;
     background-size: cover;
 }
-.scene-box-1 div{
+.xinwen1{
     width: 11.20rem;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     text-align: justify;
     line-height: 0.9rem;
     margin: 0 auto;
@@ -346,27 +346,36 @@ body{
     color: rgb(255, 255, 255);
 }
 .scene-box1-li-1{
-    margin-top: -2.5rem;
+    margin-top: 7.5rem;
 }
 /* 场景二 */
 .scene-box-2{
-    height: 27.05rem;
-    background: url(cbxres/总素材/第三层/辽宁内页.png) no-repeat;
+    height: 34.6rem;
+    background: url(新图/吉林.png) no-repeat;
     background-size: cover;
 }
-.scene-box-2 div{
+.xinwen2{
     width: 11.20rem;
     font-size: 0.7rem;
     text-align: justify;
-    line-height: 0.75rem;
+    line-height: 1.1rem;
     margin: 0 auto;
     margin-top: 4.1rem;
     color: rgb(255, 255, 255);
 }
+.title2{
+    color: #0C2950;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 4rem;
+    /* margin-bottom: 0.1rem; */
+}
+.scnebox-2
 /* 场景三 */
 .scene-box-3{
     width: 16rem;
-    height: 27.05rem;
+    height: 34.6rem;
+    background-size: cover;
 }
 
 /* 场景四 */
@@ -401,10 +410,10 @@ body{
     width: 1.36rem;
     height: 1.52rem;
     background: url(res/fanhui.png) no-repeat;
-    background-size: contain;
+    background-size: cover;
     display: none;
     position: absolute;
-    top: -2.7rem;
+    top: 0.29rem;
     left: 0.59rem;
     z-index: 100;
 }

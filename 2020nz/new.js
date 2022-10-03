@@ -1,3 +1,14 @@
+function tiaoshi(){
+    $('.year-end-fragment').hide();
+    $('.year-end-fragment-indexBox').hide();
+    $('.year-end-fragment-indexBox-gai').hide();
+    $('.year-end-scene .scene-box').eq(1).addClass('scene-box-index');
+}
+
+// tiaoshi()
+
+
+
 // 加载图片的流程
 // 先加载图片后显示图片的可拖拽图
 function loadimg() {
@@ -200,7 +211,7 @@ $('.year-end-fragment li').on({
                     $('.year-end-scene .scene-box').eq(numIndex).addClass('scene-box-index');
 
                     // 火星场景js
-                    if ($('.scene-box').eq(numIndex).index() == 3) {
+                    if ($('.scene-box').eq(numIndex).index() == 6) {
                         
                         $('.scene-box').eq(numIndex).find('.fanhui').show();
 
