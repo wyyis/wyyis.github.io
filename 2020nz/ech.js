@@ -1200,30 +1200,7 @@ function echart03(){
         ]
     option = {
       backgroundColor:'',
-      graphic: [
-        {
-          type: 'group',
-          left: 'center',
-          bottom: nowSize(0.7),
-          children: [
-                
-              {
-                  type: 'text',
-                  z: 100,
-                  left: 'center',
-                  top: 'middle',
-                  style: {
-                      fill: '#0C2950',
-                      text: [
-                          '数据来源：2011-2022年辽宁省环境状况公报',
-                      ].join('\n'),
-                      font: 'Microsoft YaHei',
-                      fontSize: nowSize(0.4),
-                  }
-              }
-          ]
-      }
-  ], 
+      
       
       title:{
         text:"辽宁省近10年生态环境指数(EI)变化情况",
@@ -1342,9 +1319,9 @@ function echart03(){
                   endValue: 100,
                   fillerColor: "#297ACC", //选中背景颜色
                   backgroundColor: "#314D70", //没选中背景颜色
-                  height: nowSize(0.5),
+                  height: nowSize(0.6),
                   bottom: nowSize(0.3),
-                  left: nowSize(0.2),
+                  left: nowSize(0.4),
                   width: "93%",
                   borderColor: "#314D70",
                   handleIcon:

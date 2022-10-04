@@ -388,7 +388,12 @@ body{
 .scene-box3-li-2{
     margin-top: 4.5rem;
 }
-
+.scene-box3-li-3{
+    color:'#0C2950';
+    font-size:0.4rem;
+    margin-top: -0.2rem;
+    text-align: center;
+}
 
 
 .fanhui{
