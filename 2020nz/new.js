@@ -2,7 +2,7 @@ function tiaoshi(){
     $('.year-end-fragment').hide();
     $('.year-end-fragment-indexBox').hide();
     $('.year-end-fragment-indexBox-gai').hide();
-    $('.year-end-scene .scene-box').eq(1).addClass('scene-box-index');
+    $('.year-end-scene .scene-box').eq(2).addClass('scene-box-index');
 }
 
 // tiaoshi()

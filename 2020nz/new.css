@@ -370,14 +370,24 @@ body{
     margin-top: 4rem;
     /* margin-bottom: 0.1rem; */
 }
-.scnebox-2
 /* 场景三 */
 .scene-box-3{
-    width: 16rem;
     height: 34.6rem;
+    background: url(新图/辽宁.png) no-repeat;
     background-size: cover;
 }
-
+.xinwen3{
+    width: 11.20rem;
+    font-size: 0.7rem;
+    text-align: justify;
+    line-height: 1.1rem;
+    margin: 0 auto;
+    margin-top: 4.1rem;
+    color: rgb(255, 255, 255);
+}
+.scene-box3-li-2{
+    margin-top: 4.5rem;
+}
 /* 场景四 */
 .scene-box-4{
     width: 16rem;
