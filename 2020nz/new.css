@@ -204,19 +204,19 @@ body{
     width: 6.01rem;
     height: 5.08rem;
     left: 0.2rem;
-    top: 7.4rem;
+    top: 9.4rem;
 }
 .fragment-index-2{
     width: 6.90rem;
 	height: 5.99rem;
     left: 6.0rem;
-    top: 6.4rem;
+    top: 8.4rem;
 }
 .fragment-index-3{
     width: 8.73rem;
     height: 9.45rem;
     left: 8.0rem;
-    top: 0.15rem;
+    top: 2.15rem;
 }
 /* .fragment-index-4{
     width: 5.23rem;
@@ -416,8 +416,8 @@ body{
 /* 海报 */
 .haibao{
     width: 16rem;
-    height: 27.05rem;
-    background: url(res/haibao-bg1.jpg) no-repeat;
+      height: 34.6rem;
+    background: url(新图/最后一页.png) no-repeat;
     background-size: cover;
     overflow: hidden;
     position: absolute;
@@ -432,10 +432,10 @@ body{
     height: 9.66rem;
     margin: 0 auto;
     text-align: center;
-    background: url(res/haibao-bg2.jpg) no-repeat;
+    background: url(cbxres/总素材/第四层/haibao-bg2.png) no-repeat;
     background-size: cover;
     font-weight: bold;
-    margin-top: 6.95rem;
+    margin-top: 12.95rem;
     overflow: hidden;
     position: relative;
     box-shadow: 0px 10px 21px 0px rgba(150, 89, 56, 0.45);
@@ -461,13 +461,13 @@ body{
     display: none;
 }
 .huan{
-    width: 2.92rem;
-    height: 0.76rem;
-    background: url(res/Button-h.jpg) no-repeat;
-    background-size: cover;
+    width: 3.92rem;
+    height: 1.76rem;
+    background: url(cbxres/总素材/第四层/Button-h.png) no-repeat;
+    background-size: contain;
     position: absolute;
-    left: 5.57rem;
-    bottom: 1.62rem;
+    left: 4.57rem;
+    bottom: 0.42rem;
 }
 
 .all-bg{
@@ -478,4 +478,46 @@ body{
     height: 100%;
     background: rgba(0,0,0,0.6);
     display: none;
+}
+.newshaibao{
+    width: 4.86rem;
+    height: 1.77rem;
+    margin: 0 auto;
+    background: url(cbxres/总素材/第四层/Button.png) no-repeat;
+    background-size: cover;
+    margin-top: 1.99rem;
+}
+.haibaiUrl{
+   width: 16rem;
+   height: 27.05rem;
+   line-height: 27.05rem;
+   font-size: .7rem;
+   color: #fff;
+   position: absolute;
+   top: 0;
+   left: -16rem;
+   text-align: center;
+   background: rgba(0,0,0,0.6);
+}
+.haibaiUrl img{
+    width: 100%;
+    height: 100%;
+}
+.haibai-sc{
+    width: 16rem;
+    height: 27.05rem;
+    position: relative;
+    top: 0;
+    left: -100rem;
+    z-index: 1000;
+}
+.haibai-sc .haibao-titleBox{
+    position: absolute;
+    top: 0.75rem;
+    left: 0.9rem;
+    margin-top: 0;
+}
+.haibai-sc img{
+    width: 100%;
+    height: 100%;
 }

@@ -3,6 +3,7 @@ function tiaoshi(){
     $('.year-end-fragment-indexBox').hide();
     $('.year-end-fragment-indexBox-gai').hide();
     $('.year-end-scene .scene-box').eq(2).addClass('scene-box-index');
+    $('.haibao').css('left','0')
 }
 
 // tiaoshi()
@@ -301,3 +302,31 @@ function haiBaoRandom() {
 $(".huan").click(function () {
     haiBaoRandom();
 });
+
+
+// 生成海报
+$(".newshaibao").click(function(){
+
+	
+	if(navigator.appVersion.indexOf('ChinaNews')!=-1 || navigator.appVersion.indexOf('chinanews')!=-1){
+        $('.haibaiUrl').css('left','0')
+        html2canvas(document.querySelector('.haibai-sc'), { useCORS: true }).then(canvas => {
+			$(".haibaiUrl").html("")
+            var dataUrl = canvas.toDataURL();
+            var newImg = document.createElement("img");
+            newImg.src = dataUrl;
+            $(".haibaiUrl").append(newImg)
+	});
+	}else{
+    $('.haibaiUrl').css('left','0')
+    // $(".haibai-sc-name").append("<img src='"+userPic+"' >")
+	html2canvas(document.querySelector('.haibai-sc'), { useCORS: true }).then(canvas => {
+			$(".haibaiUrl").html("")
+            var dataUrl = canvas.toDataURL();
+            var newImg = document.createElement("img");
+            newImg.src = dataUrl;
+            $(".haibaiUrl").append(newImg)
+	});
+	
+	}
+})
