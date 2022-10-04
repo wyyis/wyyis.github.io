@@ -388,32 +388,7 @@ body{
 .scene-box3-li-2{
     margin-top: 4.5rem;
 }
-/* 场景四 */
-.scene-box-4{
-    width: 16rem;
-    height: 27.05rem;
-    background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene4-bg.png) no-repeat;
-    background-size: cover;
-    overflow: hidden;
-}
 
-/* 场景五 */
-.scene-box-5{
-    width: 16rem;
-    height: 27.05rem;
-    background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene5-bg.png) left bottom no-repeat;
-    background-size: contain;
-    overflow: hidden;
-}
-
-/* 场景六 */
-.scene-box-6{
-    width: 16rem;
-    height: 27.05rem;
-    background: url(https://f2.cri.cn/M00/18/B0/rBABCV_qyiiAc36zAAAAAAAAAAA5783986.scene6-bg.png) no-repeat;
-    background-size: cover;
-    overflow: hidden;
-}
 
 
 .fanhui{
