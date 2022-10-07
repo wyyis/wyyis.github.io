@@ -160,7 +160,7 @@ body{
     width: 6.90rem;
 	height: 5.99rem;
     left: 5.5rem;
-    top: 7.4rem;
+    top: 7.6rem;
 }
 .fragment-index-3{
     width: 8.73rem;
@@ -264,7 +264,7 @@ body{
 }
 .xinwen1{
     width: 11.20rem;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     text-align: justify;
     line-height: 0.9rem;
     margin: 0 auto;
@@ -274,7 +274,7 @@ body{
     opacity: 0;
 }
 .scene-box1-li-1{
-    margin-top: 7.5rem;
+    margin-top: 6.6rem;
     /* display: none; */
 }
 /* 场景二 */
@@ -377,18 +377,23 @@ body{
     display: none;
 }
 .haibao-title{
-    color: #ae4141;
+    color: #041c3c;
     font-size: 0.69rem;
-    margin-top: 1.67rem;
+    margin-top: 1.0rem;
+    margin-left: 0.6rem;
     letter-spacing: .1rem;
+    line-height: 1.5rem;
 }
 .haibao-flag{
     margin: 0 auto;
-    margin-top: 1.28rem;
+    
+    margin-top: 0.4rem;
 }
 .haibao-flag img{
     width: 100%;
     height: 100%;
+    transform:scale(2);
+    mix-blend-mode: multiply;
 }
 .haibao-flag-list{
     display: none;
@@ -400,7 +405,7 @@ body{
     background-size: contain;
     position: absolute;
     left: 4.57rem;
-    bottom: 0.42rem;
+    bottom: 0.02rem;
 }
 
 .all-bg{
@@ -451,11 +456,14 @@ body{
     margin-top: 0;
 }
 .haibai-sc img{
+    display: block;
     width: 100%;
     height: 100%;
 }
-
-
+#scflag{
+    margin-top: 1.2rem;
+    margin-left: 5rem;
+}
 
 .imgShow{
     display: block;

@@ -2,8 +2,8 @@ function tiaoshi(){
     $('.year-end-fragment').hide();
     $('.year-end-fragment-indexBox').hide();
     $('.year-end-fragment-indexBox-gai').hide();
-    $('.year-end-scene .scene-box').eq(0).addClass('scene-box-index');
-    // $('.haibao').css('left','0')
+    $('.year-end-scene .scene-box').eq(5).addClass('scene-box-index');
+    $('.haibao').css('left','0')
 }
 
 // tiaoshi()
@@ -358,6 +358,7 @@ $('.year-end-fragment li').on({
                             setTimeout(function () {
                                 $('.haibao').css('left','0');
                             }, 1000);
+                            clearInterval(timer);
                         }
                     })
                 } else {
@@ -374,19 +375,16 @@ $('.year-end-fragment li').on({
 $('.haibao-flag').width($('.haibao-flag-list img').eq(0).attr('p-width'))
 $('.haibao-flag').height($('.haibao-flag-list img').eq(0).attr('p-height'))
 
-
-function haiBaoRandom() {
-    //x上限，y下限     
-    var haiBaoRandomX = $('.haibao-flag-list li').length;
-    var haiBaoRandomY = 1;
-    var rand = parseInt(Math.random() * (haiBaoRandomX - haiBaoRandomY + 1));
+var rand =1;
+function haiBaoRandom(rand) {
     $(".haibao-flag").find('img').attr('src',$('.haibao-flag-list img').eq(rand).attr('src'));
     $('.haibao-flag').width($('.haibao-flag-list img').eq(rand).attr('p-width'));
     $('.haibao-flag').height($('.haibao-flag-list img').eq(rand).attr('p-height'));
 }
 
 $(".huan").click(function () {
-    haiBaoRandom();
+    haiBaoRandom(rand%4);
+    rand=rand+1;
 });
 
 
@@ -400,6 +398,7 @@ $(".newshaibao").click(function(){
 			$(".haibaiUrl").html("")
             var dataUrl = canvas.toDataURL();
             var newImg = document.createElement("img");
+            // newImg.style.mixBlendMode = 'multiply';
             newImg.src = dataUrl;
             $(".haibaiUrl").append(newImg)
 	});
@@ -410,6 +409,7 @@ $(".newshaibao").click(function(){
 			$(".haibaiUrl").html("")
             var dataUrl = canvas.toDataURL();
             var newImg = document.createElement("img");
+            // newImg.style.mixBlendMode = 'multiply';
             newImg.src = dataUrl;
             $(".haibaiUrl").append(newImg)
 	});
