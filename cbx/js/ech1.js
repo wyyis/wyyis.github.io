@@ -8,7 +8,7 @@ var option = {
     
     backgroundColor: '',
     title: {
-      text: '黑龙江数字产业发展指数',
+      text: '黑龙江近10年数字产业发展指数',
       textStyle: {
         align: 'center',
         color: '#0C2950',
@@ -77,8 +77,8 @@ var option = {
         color: "#0C2950",
         fontSize: nowSize(0.5),
       },
-      itemWidth: nowSize(0.3),
-      itemHeight: nowSize(0.3),
+      itemWidth: nowSize(0.4),
+      itemHeight: nowSize(0.4),
       // itemGap: 35
     },
     xAxis: {
