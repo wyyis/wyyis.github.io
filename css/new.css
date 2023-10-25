@@ -1,0 +1,470 @@
+
+
+
+
+
+
+body{
+    font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI",Arial,SimSun,sans-serif !important;
+}
+.zuiwai{
+    /* 禁止滑动栏滚动 */
+    position: fixed;
+    top:0;
+	left:0;
+    width: 100%;
+    /* !important 优先级满级 */
+	height: 100% !important;
+}
+.wrap{
+    width: 100%;
+	height: 100%;
+    position: relative;
+    /* 设置大黄色背景，布满整个页面 */
+    background: url(../res/bg.png);
+    background-size: 100% 100%;
+    font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI",Arial,SimSun,sans-serif !important;
+}
+
+.wrap-auto {
+	width: 16rem;
+    height: 34.6rem;
+    margin: 0 auto;
+	position: absolute;
+    /* 居中处理 */
+    top:50%;
+	left:50%;
+    transform-origin:50% 0%;
+    -ms-transform-origin:50% 0%;
+	-webkit-transform-origin:50% 0%;
+	-moz-transform-origin:50% 0%;
+	-o-transform-origin:50% 0%;
+    /* visibility: hidden; */
+}
+.loading{
+    width: 16rem;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* visibility: hidden;  */
+}
+.loading-img{
+    width: 2rem;
+    height: 2rem;
+    background: url(../res/loading.gif) center center no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 10;
+}
+.loading-zi{
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    margin-top: 1rem;
+}
+.loading-bg{
+    width: 100%;
+	height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* 拖拽提示图片格式
+将转圈图换成拖拽图 */
+.loading-img.loadactive{
+    width: 6.37rem;
+    height: 7.25rem;
+    background: url(../res/tuozhuai.png) center center no-repeat;
+    background-size: contain;
+}
+
+.w16{
+    width: 16rem;
+}
+
+/* 进入之后的大背景 */
+.year-end{
+    height: 100%;
+    /* 隐藏x轴的滚动条 */
+    overflow-x: hidden;
+    background: url(../res/index.png) no-repeat;
+    background-size: cover;
+    font-family: arial,"Hiragino Sans GB","Microsoft Yahei","微软雅黑",Tahoma,Helvetica,STHeiti;
+}
+.year-end-box{ 
+    width: 16rem;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/* 音频 */
+.audio-box{
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    background: url(../res/play.png) no-repeat;
+    background-size: cover;
+    z-index: 101;
+}
+/* 音频动画 */
+.audio-box{
+    animation: round 5s linear infinite;
+    
+} 
+.paused{
+    animation-play-state: paused;
+}
+
+@keyframes round {
+    100% {
+      transform: rotate(1turn);
+    }
+}
+
+.audio-box audio{
+    display: none;
+}
+
+/* 坑的整体属性 */
+.year-end-fragment-indexBox{
+    width: 16rem;
+    height: 12.23rem;
+    position: absolute;
+    top: 0;
+	left: 0;
+	/* background: url(res/indexBox-bg.png) no-repeat; */
+    background-size: cover;
+    /* display: none; */
+}
+/* 坑的个体属性 */
+.year-end-fragment-indexBox li{
+    position: absolute;
+    z-index: 0;
+}
+
+
+.fragment-index-1{
+    width: 6.01rem;
+    height: 5.08rem;
+    left: 0.2rem;
+    top: 9.4rem;
+}
+.fragment-index-2{
+    width: 6.90rem;
+	height: 5.99rem;
+    left: 5.5rem;
+    top: 7.6rem;
+}
+.fragment-index-3{
+    width: 8.73rem;
+    height: 9.45rem;
+    left: 7.3rem;
+    top: 2.0rem;
+}
+/* .fragment-index-4{
+    width: 5.23rem;
+    height: 5.08rem;
+    left: 1.13rem;
+    top: 7.14rem;
+}
+.fragment-index-5{
+    width: 5.66rem;
+    height: 5.01rem;
+    left: 5.25rem;
+    top: 7.21rem;
+}
+.fragment-index-6{
+    width: 4.54rem;
+    height: 6.31rem;
+    left: 10.35rem;
+    top: 5.9rem;
+} */
+
+/* 填充物属性 */
+.year-end-fragment li{
+    position: absolute;
+    background-size: contain;
+    /* display: none; */
+}
+
+/* 移动时的渐变效果 ？？ 暂未生效 */
+.year-end-fragment li.fragment-index-ac{
+    transition: all .8s;
+}
+
+.fragment-btn1{
+    width: 6.01rem;
+    height: 5.08rem;
+    left: 9.5rem;
+    top: 12.78rem;
+    z-index: 1;
+    background: url(../res/lnpk.png) no-repeat;
+}
+.fragment-btn2{
+    width: 6.90rem;
+	height: 5.99rem;
+	top: 18.55rem;
+    left: 9.0rem;
+    z-index: 5;
+    background: url(../res/jlpk.png) no-repeat;
+}
+.fragment-btn3{
+    width: 8.73rem;
+    height: 9.45rem;
+    left: 0.31rem;
+    top: 15.64rem;
+    z-index: 1;
+    background: url(../res/hljpk.png) no-repeat;
+}
+
+/* 按钮回到坑的位置图 */
+.year-end-fragment-indexBox-gai{
+    width: 16rem;
+    height: 12.23rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+}
+
+/* 具体样式场景 */
+/* 场景样式 */
+.year-end-scene{
+    width: 16rem;
+    position: absolute;
+    right: -16rem;
+    top: 0;
+}
+.year-end-scene .scene-box{
+    width: 16rem;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.5s;
+    left: 0;
+    top: 0;
+}
+
+
+.year-end-scene li.scene-box-index{
+    left: -16rem;
+}
+
+/* 场景一 */
+.scene-box-1{
+    height: 34.6rem;
+    background: url(../res/hljbj.png) no-repeat;
+    background-size: cover;
+}
+.xinwen1{
+    width: 11.20rem;
+    font-size: 0.7rem;
+    text-align: justify;
+    line-height: 0.9rem;
+    margin: 0 auto;
+    margin-top: 3.7rem;
+    color: rgb(255, 255, 255);
+    /* display: none; */
+    opacity: 0;
+}
+.scene-box1-li-1{
+    margin-top: 6.6rem;
+    /* display: none; */
+}
+/* 场景二 */
+.scene-box-2{
+    height: 34.6rem;
+    background: url(../res/jlbj.png) no-repeat;
+    background-size: cover;
+}
+.xinwen2{
+    width: 11.20rem;
+    font-size: 0.7rem;
+    text-align: justify;
+    line-height: 1.1rem;
+    margin: 0 auto;
+    margin-top: 4.1rem;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+}
+.title2{
+    color: #0C2950;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 4rem;
+    /* margin-bottom: 0.1rem; */
+    opacity: 0;
+}
+/* 场景三 */
+.scene-box-3{
+    height: 34.6rem;
+    background: url(../res/lnbj.png) no-repeat;
+    background-size: cover;
+}
+.xinwen3{
+    width: 11.20rem;
+    font-size: 0.7rem;
+    text-align: justify;
+    line-height: 1.1rem;
+    margin: 0 auto;
+    margin-top: 4.1rem;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+}
+.scene-box3-li-2{
+    margin-top: 3.5rem;
+}
+.scene-box3-li-3{
+    color:#0C2950;
+    font-size:0.3rem;
+    margin-top:0.9rem;
+    text-align: center;
+    opacity: 0;
+}
+
+
+.fanhui{
+    width: 1.36rem;
+    height: 1.52rem;
+    background: url(../res/fanhui.png) no-repeat;
+    background-size: cover;
+    display: none;
+    position: absolute;
+    top: 0.29rem;
+    left: 0.59rem;
+    z-index: 100;
+}
+
+
+
+
+
+/* 最后的海报 */
+/* 海报 */
+.haibao{
+    width: 16rem;
+      height: 34.6rem;
+    background: url(../res/last.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -16rem;
+    z-index: 95;
+    /* transition: all 1s; */
+}
+
+.haibao-titleBox{
+    width: 14.17rem;
+    height: 9.66rem;
+    margin: 0 auto;
+    text-align: center;
+    background: url(../res/haibao-bg2.png) no-repeat;
+    background-size: cover;
+    font-weight: bold;
+    margin-top: 12.95rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 10px 21px 0px rgba(150, 89, 56, 0.45);
+}
+.haibao-pic{
+    display: none;
+}
+.haibao-title{
+    color: #041c3c;
+    font-size: 0.69rem;
+    margin-top: 1.0rem;
+    margin-left: 0.6rem;
+    letter-spacing: .1rem;
+    line-height: 1.5rem;
+}
+.haibao-flag{
+    margin: 0 auto;
+    
+    margin-top: 0.4rem;
+}
+.haibao-flag img{
+    width: 100%;
+    height: 100%;
+    transform:scale(2);
+    mix-blend-mode: multiply;
+}
+.haibao-flag-list{
+    display: none;
+}
+.huan{
+    width: 3.92rem;
+    height: 1.76rem;
+    background: url(../res/Button-h.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 4.57rem;
+    bottom: 0.02rem;
+}
+
+.all-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+}
+.newshaibao{
+    width: 4.86rem;
+    height: 1.77rem;
+    margin: 0 auto;
+    background: url(../res/Button.png) no-repeat;
+    background-size: cover;
+    margin-top: 1.99rem;
+}
+.haibaiUrl{
+   width: 16rem;
+   height: 27.05rem;
+   line-height: 27.05rem;
+   font-size: .7rem;
+   color: #fff;
+   position: absolute;
+   top: 0;
+   left: -16rem;
+   text-align: center;
+   background: rgba(0,0,0,0.6);
+}
+.haibaiUrl img{
+    width: 100%;
+    height: 100%;
+}
+.haibai-sc{
+    width: 16rem;
+    height: 27.05rem;
+    position: relative;
+    top: 0;
+    left: -100rem;
+    z-index: 1000;
+}
+.haibai-sc .haibao-titleBox{
+    position: absolute;
+    top: 0.75rem;
+    left: 0.9rem;
+    margin-top: 0;
+}
+.haibai-sc img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#scflag{
+    margin-top: 1.2rem;
+    margin-left: 5rem;
+}
+
+.imgShow{
+    display: block;
+}

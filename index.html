@@ -1,11 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“数”说东北振兴，“拼”出伟大征程</title>
+    <!-- 引入echarts -->
+    <script>
+		autoRem();
+		function autoRem(){
+		    var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+		
+			var _html = document.getElementsByTagName('html')[0];
+			view_width>1242?_html.style.fontSize = 1242 / 16 + 'px':_html.style.fontSize = view_width / 16 + 'px';
+		}
+		window.onresize = function(){
+			autoRem();
+		}
+	</script>
+    <script src="js/echarts.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/map/js/world.js"></script> 
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/new.css">
 </head>
 <body>
-	<a href="mailto:wyyi2051@icloud.com">通过电子邮件与我取得联系</a>
+    <div class="zuiwai w-100 h-100">
+        <div class="wrap">
+            <div class="wrap-auto">
+                <div class="year-end nz_bg w16">
+                    <div class="year-end-box">
+                        <div class="audio-box paused">
+                            <audio id="pageaudio" src="res/music.mp3" preload="preload" webkit-playsinline="" playsinline="" x5-playsinline="true" x-webkit-airplay="isHtml5UseAirPlay"></audio>
+                        </div>
+                        <div class="year-end-fragment-indexBox nz_bg">
+                            <ul>
+                                <li class="fragment-index-3"></li>
+                                <li class="fragment-index-2"></li>
+                                <li class="fragment-index-1"></li>
+                            </ul>
+                        </div>
+                        <div class="year-end-fragment-indexBox-gai"></div>
+                        <div class="year-end-fragment">
+                            <ul>
+                                <li class="fragment-btn nz_bg fragment-btn3" changjing="off"></li>
+                                <li class="fragment-btn nz_bg fragment-btn2" changjing="off"></li>
+                                <li class="fragment-btn nz_bg fragment-btn1" changjing="off"></li>
+                            </ul>
+                        </div>
+                        <div class="year-end-scene">
+                            <ul>
+                                <li class="scene-box scene-box-1 nz_bg">
+                                    <ul>
+                                        <div class="xinwen1">2022年8月10日，世界5G大会在哈尔滨市开幕。大会以会、展、赛、投资洽谈等形式呈现5G产业的技术进步和产品创新，并邀请通信领域知名专家学者共同探讨5G国际合作、技术前瞻、数字产业、5G+行业应用等多个话题。</div>
+
+                                        <li class="scene-box1-li-1 nz_bg">
+                                            <div id="main1" style="width: 16rem;height: 18rem;"></div>
+                                        </li>
+                                    </ul>
+                                    <div class="fanhui fanhui1 nz_bg"></div> 
+                                </li>
+                                <li class="scene-box scene-box-2 nz_bg">
+                                    <ul>                                   
+                                      <div class="xinwen2">2022年8月1日，一趟满载汽车零部件的中欧班列从长春兴隆铁路口岸缓缓驶出。这是吉林省首趟中欧班列汽车零部件专列，此行运载货值约1543万元，总运行里程1.04万公里，将于26天后抵达德国纽伦堡车站。</div>
+                                      <li ><div class="title2">中欧班列沿线国家</div>
+                                    </li>
+                                      <li class="scene-box2-li-2 nz_bg">
+                                        <div id="main2" style="width: 16rem;height: 18rem;"></div>
+                                    </li>
+                                    </ul>
+                                    <div class="fanhui fanhui2"></div>
+                                </li>
+                                <li class="scene-box scene-box-3 nz_bg">
+                                    <ul>
+                                        <div class="xinwen3">2022年8月18日，中共辽宁省委宣传部召开“辽宁这十年”主题系列新闻发布会。会议指出，2012—2021年，辽宁省各级财政累计投入约1575亿元用于生态环境保护，推进生态文明建设和生态环境保护取得了新进展新成效。</div>
+                                    <li class="scene-box3-li-2 nz_bg">
+                                        <div id="main3" style="width: 16rem;height: 18rem;"></div>
+                                    </li>
+                                    <li  class="scene-box3-li-3 nz_bg">
+                                        <div class="title3">数据来源：2011-2022年辽宁省环境状况公报</div>
+                                    </li>
+                                    </ul>
+                                    <div class="fanhui fanhui3"></div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="haibao">
+                            <div class="haibao-name"></div>
+                            <div class="haibao-titleBox">
+                                <div class="haibao-pic">
+                                    <img src="res/touxiang.jpg" alt="" srcset="" />
+                                </div>
+                                <p class="haibao-title">奋力书写新时代东北振兴的崭新篇章，我想说:</p>
+                                <p class="haibao-flag">
+                                    <img src="res/by1.png" alt="" srcset="" />
+                                </p>
+                                <div class="haibao-flag-list">
+                                    <ul>
+                                        <li><img p-width='5.15rem' p-height='2.57rem' src="res/by1.png" alt="" srcset="" /></li>
+                                        <li><img p-width='5.15rem' p-height='2.57rem' src="res/by2.png" alt="" srcset="" /></li>
+                                        <li><img p-width='5.30rem' p-height='2.57rem' src="res/by3.png" alt="" srcset="" /></li>
+                                        <li><img p-width='5.15rem' p-height='2.57rem' src="res/by4.png" alt="" srcset="" /></li>
+            
+                                    </ul>
+                                </div>
+                                <div class="huan nz_bg"></div>
+                            </div>
+                            <div class="newshaibao"></div>
+                            <div class="haibaiUrl">正在生成...</div>
+                        </div>
+                        <div class="haibai-sc">
+                            <div class="haibai-sc-img">
+                                <img src="res/haibao-bg2.png" alt="" />
+                            </div>
+                            <div class="haibao-titleBox">
+                                <p class="haibao-title">奋力书写新时代东北振兴的崭新篇章，我想说:</p>
+                                <p class="haibao-flag" id="scflag">
+                                    <img src="res/by1.png" alt="" srcset="" />
+                                </p>
+                            </div>
+                        </div>
+                        <div class="all-bg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="loading">
+                <div class="loading-img"></div>
+                <div class="loading-zi">loading...</div>
+                <div class="loading-bg"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/new.js"></script>
+    <script src="js/ech.js"></script>
+    <script>
+
+//当前视口宽度
+
+
+
+
+    </script>
+
+<script>
+
+  
+
+  
+</script>
+
+
 </body>
 </html>
